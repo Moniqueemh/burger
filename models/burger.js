@@ -1,7 +1,7 @@
 // import ORM
 const orm = require("../config/orm.js");
 
-const burgers = {
+const burger = {
     all: function (cb) {
         orm.selectAll("burgers", function (result) {
             cb(result);
@@ -21,4 +21,4 @@ const burgers = {
 };
 
 // Export the database functions for the controller.
-module.exports = burgers;
+module.exports = burger;
