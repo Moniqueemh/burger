@@ -1,4 +1,4 @@
-{{! html outline doe client side view }}
+{{! html outline for client side view }}
 
 <div class="container">
     <!-- Content here -->
@@ -10,13 +10,39 @@
             <p><img src="https://aht.seriouseats.com/images/2011/08/20110824-pusheen-burger.gif" alt="cat on burg"
                     width="300" height="300">
             </p>
-            </div>
-            <div class="d-flex justify-content-center">
-                <div class="form-group">
-                    <input type="submitBurger" class="form-control" id="exFormBurger">
-                </div>
-                <p>
-                <button type="button" class="btn btn-outline-info">SUBMIT</button>
-                </p>
-            </div>
         </div>
+    </div>
+</div>
+</div>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+        {{burger_name}}
+        <button type="submit" id={{id}} class="btn btn-info">DEVOUR</button>
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>
+    {{burger_name}}
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+<div class="d-flex justify-content-center">
+    <h2>Add a Burger</h2>
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="burgerName"></label>
+            <input type="text" id="burgerName" name="name">
+        </div>
+        <button type="submit">Add Burger</button>
+    </form>
+</div>
