@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Moniqueemh/burger/issues"
   },
-  "homepage": "https://github.com/Moniqueemh/burger/",
+  "homepage": "https://Moniqueemh.github.io/burger/",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
